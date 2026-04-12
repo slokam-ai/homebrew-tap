@@ -5,21 +5,21 @@
 class Localgcp < Formula
   desc "The unified GCP emulator. One binary, thirteen services, zero cloud bills."
   homepage "https://localgcp.com"
-  version "0.5.1"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/slokam-ai/localgcp/releases/download/v0.5.1/localgcp_0.5.1_darwin_amd64.tar.gz"
-      sha256 "e86ce04c8de1aff5dfe60d37bc4a198a9e47d298df1ab85303eb0bb39741ffa2"
+      url "https://github.com/slokam-ai/localgcp/releases/download/v0.6.0/localgcp_0.6.0_darwin_amd64.tar.gz"
+      sha256 "abdb9cbb362eb972344a6d4af214b1d9ef3a88ff94a7621b172a8f16fa4505bc"
 
       define_method(:install) do
         bin.install "localgcp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/slokam-ai/localgcp/releases/download/v0.5.1/localgcp_0.5.1_darwin_arm64.tar.gz"
-      sha256 "6effe4395ce1d96f26f5ee65db44b759f21fb26a20de1c44f4fe9927869d78e9"
+      url "https://github.com/slokam-ai/localgcp/releases/download/v0.6.0/localgcp_0.6.0_darwin_arm64.tar.gz"
+      sha256 "614351866baecbf4e99bb29d62d4b24e1f6106391cbcde619bf50a661bce0aff"
 
       define_method(:install) do
         bin.install "localgcp"
@@ -29,15 +29,15 @@ class Localgcp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/slokam-ai/localgcp/releases/download/v0.5.1/localgcp_0.5.1_linux_amd64.tar.gz"
-      sha256 "54beb9381651497271e4b35125970c025d4427801c9dae22951e0eb4714e8fbf"
+      url "https://github.com/slokam-ai/localgcp/releases/download/v0.6.0/localgcp_0.6.0_linux_amd64.tar.gz"
+      sha256 "7cd5937c7c3856675f4180ced40bd4278db03b5607389a63d1e86502a3131cd4"
       define_method(:install) do
         bin.install "localgcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/slokam-ai/localgcp/releases/download/v0.5.1/localgcp_0.5.1_linux_arm64.tar.gz"
-      sha256 "459e1b0413f9706be359aa842b053b539e54906f175fc31303a60a3895b337b9"
+      url "https://github.com/slokam-ai/localgcp/releases/download/v0.6.0/localgcp_0.6.0_linux_arm64.tar.gz"
+      sha256 "0b6c2dc884411f150a5e40f19c865d167d6e939f908604b9c5abcd6b09ff37f0"
       define_method(:install) do
         bin.install "localgcp"
       end
